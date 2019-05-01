@@ -1,0 +1,6 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"E:\Project c\Project Uc\Shifting.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"E:\Project c\Project Uc\" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	126	All files Preprocessed in 1 ms	 
+diagnostics: 0	127	All files Compiled in 0 ms	 
+error: 0	357	main function is not defined	main function is not defined
+error: 0	102	Finished (with errors): 08 Feb 2015, 23:30:12	Shifting.mcppi

@@ -1,0 +1,29 @@
+#line 1 "C:/Users/Xbot/Desktop/Street Light with MCU By Zia (Digital)/Street light Digital.c"
+void main()
+{
+ansel=0;
+anselh=0;
+trisb.f0=1;
+trisb.f1=1;
+trisd.f0=0;
+trisd.f1=0;
+while(1)
+{
+if(portb.f0==1)
+{
+portd.f0=1;
+}
+else
+{
+portd.f0=0;
+}
+if(portb.f1==1)
+{
+portd.f1=1;
+}
+else
+{
+portd.f1=0;
+}
+}
+}

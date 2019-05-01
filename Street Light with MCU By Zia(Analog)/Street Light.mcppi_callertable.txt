@@ -1,0 +1,9 @@
+main
+	ADC_Read
+		Delay_22us
+	Mul_32x32_FP
+		RES032
+		SETFOV32
+		SETFUN32
+	Double2Int
+		SETIOV3224

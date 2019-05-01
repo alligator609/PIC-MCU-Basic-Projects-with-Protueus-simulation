@@ -1,0 +1,18 @@
+main
+	__CC2DW
+		____DoICP
+	forward
+	straight
+		short_path
+	right
+	left_turn
+		short_path
+	left
+	stop
+		replay
+			forward
+			left
+			right
+			done
+	u_turn
+		short_path

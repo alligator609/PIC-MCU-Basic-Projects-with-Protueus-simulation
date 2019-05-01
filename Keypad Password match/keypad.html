@@ -1,0 +1,89 @@
+Version:0.9
+StartHTML:0000000105
+EndHTML:0000013533
+StartFragment:0000001499
+EndFragment:0000013517
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>mikroIDE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+body { font-family: Courier New; font-size: 14pt; }
+.cpp1-activecomment { color: #0078D7; font-style: italic; text-decoration: underline; }
+.cpp1-assembler { color: #FF0000; }
+.cpp1-binary { color: #800000; }
+.cpp1-character { color: #808000; }
+.cpp1-comment { color: #008000; font-style: italic; }
+.cpp1-float { color: #800000; }
+.cpp1-hexadecimal { color: #008000; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #FF0000; }
+.cpp1-imagelink { color: #800080; font-style: italic; text-decoration: underline; }
+.cpp1-number { color: #008000; }
+.cpp1-octal { color: #0000FF; }
+.cpp1-preprocessor { color: #8000FF; font-style: italic; }
+.cpp1-reservedword { color: #000000; font-weight: bold; }
+.cpp1-space { color: #F0F0F0; }
+.cpp1-string { color: #0000FF; }
+.cpp1-symbol { color: #000000; }
+.cpp1-weblink { color: #0078D7; font-style: italic; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<!--StartFragment--><pre><code><span class="cpp1-preprocessor">#include&nbsp;&quot;E:\Hamdy&nbsp;Library\LCD.h&quot;
+</span><span class="cpp1-reservedword">char</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-identifier">keypadPort</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-reservedword">at</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">PORTB;
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">i;
+</span><span class="cpp1-reservedword">char</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">password[</span><span class="cpp1-number">4</span><span class="cpp1-symbol">];
+
+</span><span class="cpp1-reservedword">char</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">get_password()
+{
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Loop:
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CLEAR);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Out(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-string">&quot;Enter&nbsp;Password&nbsp;:&quot;</span><span class="cpp1-symbol">);
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">for</span><span class="cpp1-symbol">(i=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;i&lt;</span><span class="cpp1-number">3</span><span class="cpp1-symbol">;i++)
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">while</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">(password[i]</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">==</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">Keypad_Key_Click();
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">1</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'7'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">2</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'8'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">3</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'9'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">5</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'4'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">6</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'5'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">7</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'6'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">9</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'1'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">10</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'2'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(password[i]==</span><span class="cpp1-number">11</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">password[i]</span><span class="cpp1-space">&nbsp;&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-character">'3'</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Chr(</span><span class="cpp1-number">2</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">i+</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">password[i]);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">if</span><span class="cpp1-symbol">(strcmp(password,</span><span class="cpp1-string">&quot;123&quot;</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">==</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-number">0</span><span class="cpp1-symbol">)</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">{</span><span class="cpp1-reservedword">return</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;}
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">else</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">{</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">goto</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">Loop;</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+}
+
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">main()
+{
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">trisc.b0=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">portc.b0=</span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Init();</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">keypad_Init();
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CURSOR_OFF);
+
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">get_password();
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-reservedword">while</span><span class="cpp1-symbol">(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Cmd(_LCD_CLEAR);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">Lcd_Out(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">,</span><span class="cpp1-number">2</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">,</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-string">&quot;Flash_Prog&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">portc.b0</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">=</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">~</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-identifier">portc.b0;
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-identifier">delay_ms(</span><span class="cpp1-number">1000</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">&nbsp;</span><span class="cpp1-symbol">}
+</span></code></pre><!--EndFragment--></body>
+</html>

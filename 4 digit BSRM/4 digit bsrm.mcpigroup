@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=..\4 digit counter\4 digit counter.mcppi
+Project1=4 digit bsrm.mcppi
+[ActiveProject]
+Index=1
